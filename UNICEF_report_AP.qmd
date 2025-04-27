@@ -9,6 +9,10 @@ format:
     embed-resources: true
     code-fold: true
     theme: sandstone
+    toc: true                 
+    toc-depth: 3             
+    toc-location: left       
+    toc-title: "Table of Contents"       
 execute:
   error: true
   echo: true
@@ -16,7 +20,7 @@ execute:
 ---
 
 **Author**: Anthea Petrillo                      
-**Published**: April 26, 2025
+**Published**: April 27, 2025
 
 
 <div style="text-align: center;">
@@ -219,8 +223,8 @@ df = df[(df['year'] == 2022)].dropna()
 top10_high = df.nlargest(10, 'GDP per capita (constant 2015 US$)')['country'].tolist()
 top10_low = df.nsmallest(10, 'GDP per capita (constant 2015 US$)')['country'].tolist()
 
-print("Top 10 Highest GDP per Capita in 2022:", top10_high)
-print("Top 10 Lowest GDP per Capita in 2022:", top10_low)
+print("Top 10 countries with the highest GDP per capita in 2022:", top10_high)
+print("Top 10 countries with the lowest GDP per capita in 2022:", top10_low)
 ```
 
 ```{python}
@@ -291,7 +295,7 @@ fig.update_layout(
 fig.show() 
 ```
 
-<p>There is a <strong><em>hospital</em></strong> in the next village, but the <strong><em>water</em></strong> from the tap tastes like <strong><em>dirt</em></strong>. My mother says that <span style="color: #1a365d; font-weight: bold; font-style: italic;">in richer countries, the water runs clear and doctors always have sterile gloves</span>. I've never seen clean water myself, maybe if I had, my stomach wouldn't hurt like this.</p>
+<p>There is a <strong><em>hospital</em></strong> in the next village, but the <strong><em>water</em></strong> from the tap tastes like <strong><em>dirt</em></strong>. My mother says that <span style="color: #1a365d; font-weight: bold; font-style: italic;">in richer countries, the water runs clear and doctors always have sterile gloves</span>. I've never seen clean water myself. Maybe if I had, my stomach wouldn't hurt like this.</p>
 
 <p>When we finally reached the hospital, the doctors just shook their heads. <span style="color: #3a7ca5; font-weight: bold; font-style: italic;">'We don't have basic water services here,'</span> they told us. My mother held me tighter, but there was nothing they could do.</p>
 
@@ -348,7 +352,7 @@ fig.show()
 
 My mother says that in <span style="color: #1a365d; font-weight: bold; font-style: italic;">rich countries</span>, parents have **__few children__** and live long enough to become **__grandparents__**. Here, instead, who knows if I will even grow up to be as old as my **__father__**.
 
-# <span style="color:#1F407A; font-weight: bold;">Demographic patterns (2021): </span><span style="color:#CC4178; font-weight: bold;">Birth rate</span><span style="color:#1F407A; font-weight: bold;"> & </span><span style="color:#CC4178; font-weight: bold;">Life expectancy</span>
+# <span style="color:#1F407A;">Demographic patterns (2021)</span>: <span style="color:#CC4178; font-style:italic;">Birth rate</span> <span style="color:#1F407A;">&</span> <span style="color:#CC4178; font-style:italic;">Life expectancy</span>
 
 ```{python}
 import pandas as pd
@@ -399,8 +403,7 @@ fig.show()
 
 In the following chart, the disparity in birth rates between the poorest countries (**<span style="color: #FF69B4;">pink</span>** trend line) and the richest countries (**<span style="color: #800080;">purple</span>** trend line) is even more evident.
 
-# **<span style="color: #1F407A;">Birth Rate Trends</span>: <span style="color: #1F77B4;">High vs Low Rate Countries</span>**
-
+# <span style="color:#1F407A;">Birth Rate Trends</span>: <span style="color:#1F77B4; font-style:italic;">High vs Low Rate Countries</span>
 
 ```{python}
 import pandas as pd
@@ -469,7 +472,7 @@ In <span style="color: #1a365d; font-weight: bold; font-style: italic;">wealthie
 
 Here, the **_scarcity of resources_** means more children with fewer chances for a long, healthy life. Here, adults say, <span style="color: #1a365d; font-weight: bold; font-style: italic;">"We have many children because the sky will take some of them."</span> But I hope the sky won't take any of us.
 
-<h1><strong><span style="color:#1F407A;">GDP per capita and its effect on</span><span style="color:#1F77B4;"> birth rate</span></strong></h1>
+# <span style="color:#1F407A;">GDP per capita and its effect on</span> <span style="color:#1F77B4; font-style:italic;">birth rate</span>
 
 ```{python}
 import pandas as pd
@@ -559,15 +562,17 @@ fig.add_annotation(
 fig.show()
 ```
 
-
-<p><strong>Saving children from preventable deaths like diarrhoea requires <span style="background-color:#D6EEFF;">better healthcare access</span> and <span style="background-color:#D6EEFF;">hygiene in vulnerable communities</span>.
+To save the lives of the youngest from **preventable deaths** like *diarrhea* it is essential to <span style="background-color: #D6EEFF;">enhance access to healthcare services.</span> Reducing **infant mortality** from *diarrhea* requires <span style="background-color: #D6EEFF;">improving the hygienic and economic conditions</span> of the most disadvantaged populations.
 
 Many lives, including mine, could have been saved with better access to healthcare.
 
-Your <span style="background-color:#D6EEFF;">UNICEF donation</span> can <span style="background-color:#D6EEFF;">save lives</span> and <span style="background-color:#D6EEFF;">keep hope alive</span> for those still fighting.</strong></p>
+With a **donation to UNICEF**, you can <span style="background-color: #D6EEFF;">save many lives</span> and ensure that the *hope of many children* remains **alive**, never *fading*, as mine unfortunately has.
+
 
 <div style="text-align:center">
 <a href="https://donazioni.unicef.it/lp/thatsall?wdgs=GAPM&type=reg&utm_source=google&utm_medium=cpc&utm_campaign=CD_GA_SEA_PLEDGE_maln_GADS_BRAND_noexact_27032024&utm_adgroup=_NO_EXACT_brand_pura&gad_source=1&gclid=Cj0KCQjw4v6-BhDuARIsALprm32xVHM4Ks4EGCzXyslB8_yVRQg-e3E2sGklwtrCPwJkVXWfgZLtOxsaAvKDEALw_wcB#/home" target="_blank">
 <img src="donate.png" alt="Donate" style="cursor:pointer;max-width:100%">
 </a>
 </div>
+
+<p style="text-align: center;"><em>Thank you for lending your ear to my story.</em></p>
